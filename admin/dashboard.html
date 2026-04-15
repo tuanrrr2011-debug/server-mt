@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - License Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2>📦 License Manager</h2>
+      </div>
+
+      <nav class="menu">
+        <a href="dashboard.html" class="active">📊 Dashboard</a>
+        <a href="keys.html">🔑 License Keys</a>
+        <a href="api.html">🔒 API Keys</a>
+        <a onclick="logout()" style="cursor: pointer;">🚪 Logout</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Header -->
+      <header class="header">
+        <h1>Dashboard</h1>
+        <div>
+          <span class="text-secondary">Welcome, <strong class="header-username">Admin</strong></span>
+        </div>
+      </header>
+
+      <!-- Content -->
+      <main class="content">
+        <h2>Overview</h2>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+          <!-- Total Keys Card -->
+          <div class="card">
+            <h3>Total License Keys</h3>
+            <div style="font-size: 2rem; font-weight: 700; color: var(--primary); margin: 1rem 0;">
+              <span data-stat="total-keys">0</span>
+            </div>
+            <small class="text-muted">Total keys in the system</small>
+          </div>
+
+          <!-- Bound Keys Card -->
+          <div class="card">
+            <h3>Bound Keys</h3>
+            <div style="font-size: 2rem; font-weight: 700; color: var(--info); margin: 1rem 0;">
+              <span data-stat="bound-keys">0</span>
+            </div>
+            <small class="text-muted">Keys bound to devices</small>
+          </div>
+
+          <!-- Available Keys Card -->
+          <div class="card">
+            <h3>Available Keys</h3>
+            <div style="font-size: 2rem; font-weight: 700; color: var(--success); margin: 1rem 0;">
+              <span data-stat="available-keys">0</span>
+            </div>
+            <small class="text-muted">Keys ready to use</small>
+          </div>
+
+          <!-- API Keys Card -->
+          <div class="card">
+            <h3>API Keys</h3>
+            <div style="font-size: 2rem; font-weight: 700; color: var(--warning); margin: 1rem 0;">
+              <span data-stat="api-keys">0</span>
+            </div>
+            <small class="text-muted">Active API keys</small>
+          </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="card">
+          <div class="card-header">
+            <h2>Quick Actions</h2>
+          </div>
+          <p class="text-muted mb-2">Manage your license and API keys from here.</p>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="keys.html" class="btn btn-primary">Manage License Keys</a>
+            <a href="api.html" class="btn btn-primary">Manage API Keys</a>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

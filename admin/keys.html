@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>License Keys - License Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2>📦 License Manager</h2>
+      </div>
+
+      <nav class="menu">
+        <a href="dashboard.html">📊 Dashboard</a>
+        <a href="keys.html" class="active">🔑 License Keys</a>
+        <a href="api.html">🔒 API Keys</a>
+        <a onclick="logout()" style="cursor: pointer;">🚪 Logout</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Header -->
+      <header class="header">
+        <h1>License Keys</h1>
+        <button class="btn btn-primary" id="createKeyBtn">+ Create Key</button>
+      </header>
+
+      <!-- Content -->
+      <main class="content">
+        <div class="card">
+          <div class="card-header">
+            <h2>All License Keys</h2>
+          </div>
+
+          <div class="table-container">
+            <table id="keysTable">
+              <thead>
+                <tr>
+                  <th>License Key</th>
+                  <th>Device ID</th>
+                  <th>Status</th>
+                  <th>Created At</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="5" class="text-center text-muted">Loading...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Info Section -->
+        <div class="card mt-3">
+          <h3>About License Keys</h3>
+          <p>
+            <strong>Format:</strong> License keys are generated in the format
+            <code class="code">XXXX-XXXX-XXXX</code>
+          </p>
+          <p>
+            <strong>Status:</strong>
+          </p>
+          <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+            <li>
+              <strong>Available:</strong> Key is not yet bound to any device
+            </li>
+            <li>
+              <strong>Bound:</strong> Key is bound to a device and ready to use
+            </li>
+          </ul>
+          <p>
+            <strong>Actions:</strong>
+          </p>
+          <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+            <li><strong>Copy:</strong> Copy the key to clipboard</li>
+            <li><strong>Reset:</strong> Remove device binding (make available again)</li>
+            <li><strong>Delete:</strong> Permanently delete the key</li>
+          </ul>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
