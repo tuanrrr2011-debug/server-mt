@@ -1,0 +1,19 @@
+{
+  "name": "license-server",
+  "version": "1.0.0",
+  "description": "Professional License Key + API Key Management System (SaaS Style)",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'Build complete'",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "mongodb": "^5.8.0",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.1.0",
+    "dotenv": "^16.3.1"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}
